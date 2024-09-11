@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/home/Home";
+import Pokemon from "./components/pokemon/Pokemon";
+import Header from "./components/header/Header";
+import Error404 from "./components/404/Error404";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Provider store={store}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pokemon/:id" element={<Pokemon />} />
+          <Route path="*" element={Error404} />
+        </Routes>
+      </Provider>
+    </Router>
   );
 }
 
