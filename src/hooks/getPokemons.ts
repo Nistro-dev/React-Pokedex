@@ -42,12 +42,27 @@ const GetPokemons = (id?: number) => { // Ajoute un paramètre optionnel "id" de
 
     // Utilise useEffect pour récupérer le pokémon sélectionné si l'id est défini
     useEffect(() => {
-        // Si l'id et la liste des pokémons ne sont pas vides
-        if (id && pokemonList.length > 0) {
-            // Récupère le pokémon sélectioné
-            const selectedPokemon = pokemonList.find((pokemon: any) => pokemon.id === id);
-            // Met le pokémon sélectionné dans le state "pokemon"
-            setPokemon(selectedPokemon);
+        // Si l'id est défini, charge le pokémon
+        if (id) {
+            fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    const pokemon = {
+                        id: data.id,
+                        name: data.name,
+                        image: data.sprites.front_default,
+                        types: data.types.map((type: any) => type.type.name),
+                        abilities: data.abilities.map((ability: any) => ability.ability.name),
+                        stats: data.stats.map((stat: any) => ({
+                            name: stat.stat.name,
+                            value: stat.base_stat
+                        }))
+                    };
+                    // Met le pokémon dans le state "pokemon"
+                    setPokemon(pokemon);
+                    // Met le state "loading" à false
+                    setLoading(false);
+                });
         }
     }, [id, pokemonList]);
 
