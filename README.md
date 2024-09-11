@@ -1,46 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# React-Pokedex
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+React-Pokedex est une application web construite avec React qui vous permet de naviguer dans une base de données Pokémon. Cette application utilise l'API Pokémon pour fournir des informations détaillées sur chaque Pokémon, y compris des statistiques, des types, et plus encore. C'est un excellent projet pour apprendre à travailler avec React et les appels d'API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Fonctionnalités
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Affichage de la liste des Pokémon** : Consultez une liste complète de tous les Pokémon disponibles.
+- **Détails des Pokémon** : Obtenez des informations détaillées sur chaque Pokémon, y compris ses statistiques et ses types.
 
-### `npm test`
+## Prérequis
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés :
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) (version 14 ou supérieure)
+- [npm](https://www.npmjs.com/) (inclus avec Node.js)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clonez le dépôt :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/Nistro-dev/React-Pokedex.git
+    ```
 
-### `npm run eject`
+2. Accédez au répertoire du projet :
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    ```bash
+    cd React-Pokedex
+    ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Installez les dépendances :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ```bash
+    npm install
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Lancez l'application en mode développement :
 
-## Learn More
+    ```bash
+    npm start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Votre application devrait maintenant être accessible à [http://localhost:3000](http://localhost:3000).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Utilisation
+
+1. **Naviguez dans la liste des Pokémon** : La page d'accueil affiche une liste des Pokémon que vous pouvez faire défiler.
+2. **Consultez les détails** : Cliquez sur un Pokémon pour voir ses détails, y compris ses statistiques et ses types.
+
+## Technologies utilisées
+
+- [React](https://reactjs.org/) : Bibliothèque JavaScript pour construire des interfaces utilisateur.
+- [React Redux](https://react-redux.js.org/) : Librairie pour gérer l'état global de l'application.
+- [Fluent UI](https://developer.microsoft.com/en-us/fluentui) : Ensemble de composants UI de Microsoft pour créer des interfaces élégantes et cohérentes.
+- [TypeScript](https://www.typescriptlang.org/) : Superset de JavaScript qui ajoute un typage statique à la langue.
+- [React Router](https://reactrouter.com/) : Librairie pour la gestion de la navigation et des routes dans les applications React.
+
+## Contact
+
+Pour toute question ou suggestion, vous pouvez me contacter à [mael.michaud@exakis-nelite.com](mailto:mael.michaud@exakis-nelite.com).
+
+---
+
